@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мої уроки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-week="red">
+<div class="wrap">
+  <header class="top">
+    <h1>Мої уроки</h1>
+    <div class="top-actions">
+      <button type="button" class="ghost" id="btn-calib">Який зараз тиждень?</button>
+      <button type="button" class="ghost" id="btn-backup">Резервна копія</button>
+    </div>
+  </header>
+
+  <section class="banner" aria-label="Поточний тиждень">
+    <button type="button" class="nav" id="btn-prev" aria-label="Попередній тиждень"></button>
+    <div class="banner-mid" aria-live="polite">
+      <div class="banner-title" id="week-title"></div>
+      <div class="banner-sub">
+        <span id="week-range"></span>
+        <span class="banner-badge" id="week-badge" hidden></span>
+        <button type="button" class="today-btn" id="btn-today" hidden>До поточного тижня</button>
+      </div>
+    </div>
+    <button type="button" class="nav" id="btn-next" aria-label="Наступний тиждень"></button>
+  </section>
+
+  <p class="hint" id="hint" hidden></p>
+  <main class="board" id="board"></main>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="script.js"></script>
+</body>
+</html>
